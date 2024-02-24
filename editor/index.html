@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Redactor</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+<div id="app">
+    <div class="main">
+        <button @click="applyList">Додати список</button>
+        <button @click="applyOrderedList">Додати нумерований список</button>
+        <button @click="applyBold">Жирний</button>
+        <button @click="applyItalic">Курсив</button>
+        <button @click="applyLink">Посилання</button>
+        <div class="editor" contenteditable="true" ref="editor" @input="updateContent"></div>
+    </div>
+</div>
+
+<script type="module" src="src/vue.js" ></script>
+
+
+<style>
+    .main {
+        width: 100%;
+    }
+    .editor {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+        min-height: 600px;
+    }
+</style>
+</body>
+</html>
